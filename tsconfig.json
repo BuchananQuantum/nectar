@@ -1,7 +1,12 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
+  "files": [
+    "src/@types/graphql.d.ts"
+  ],
   "compilerOptions": {
+    "typeRoots": [
+      "src/@types"
+    ],
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
@@ -20,8 +25,10 @@
     "module": "es2020",
     "lib": [
       "es2020",
-      "dom"
-    ]
+      "dom",
+      "esnext.asynciterable"
+    ],
+    "allowSyntheticDefaultImports": true
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
